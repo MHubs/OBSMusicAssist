@@ -107,7 +107,7 @@ class ViewController: NSViewController {
             }
             
             if !albumLabel.stringValue.isEmpty && albumLabel.stringValue != " " {
-                parseData(searchTerm: trackInfo["trackAlbum"] as! String)
+                parseData(searchTerm: artistLabel.stringValue + " " + (trackInfo["trackAlbum"] as! String))
             }
         }
     }
@@ -198,7 +198,7 @@ class ViewController: NSViewController {
     
     func parseData(searchTerm: String) {
         let itunesSearchTerm = searchTerm.replacingOccurrences(of: " ", with: "%20", options: .caseInsensitive, range: nil)
-        let urlString = "https://itunes.apple.com/search?term=" + itunesSearchTerm + "&entity=song"
+        let urlString = "https://itunes.apple.com/search?term=" + itunesSearchTerm
         let url = URL(string: urlString)!
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
