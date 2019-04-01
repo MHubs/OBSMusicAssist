@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D050C427224FE5140074862E /* iTunesBridge.applescript in Sources */ = {isa = PBXBuildFile; fileRef = D050C426224FE5140074862E /* iTunesBridge.applescript */; };
+		D050C429224FFA5F0074862E /* iTunesBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D050C428224FFA5F0074862E /* iTunesBridge.swift */; };
+		D050C42D224FFE130074862E /* AppleScriptObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D050C42B224FFE130074862E /* AppleScriptObjC.framework */; };
+		D050C42E224FFE130074862E /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D050C42C224FFE130074862E /* AppleScriptKit.framework */; };
+		D0ABEFFA224FC67300AA705A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ABEFF9224FC67300AA705A /* AppDelegate.swift */; };
+		D0ABEFFC224FC67300AA705A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ABEFFB224FC67300AA705A /* ViewController.swift */; };
+		D0ABEFFE224FC67500AA705A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0ABEFFD224FC67500AA705A /* Assets.xcassets */; };
+		D0ABF001224FC67500AA705A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0ABEFFF224FC67500AA705A /* Main.storyboard */; };
+		D0ABF00D224FC67500AA705A /* OBSMusicAssistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ABF00C224FC67500AA705A /* OBSMusicAssistTests.swift */; };
+		D0ABF018224FC67500AA705A /* OBSMusicAssistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ABF017224FC67500AA705A /* OBSMusicAssistUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0ABF009224FC67500AA705A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0ABEFEE224FC67300AA705A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0ABEFF5224FC67300AA705A;
+			remoteInfo = OBSMusicAssist;
+		};
+		D0ABF014224FC67500AA705A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0ABEFEE224FC67300AA705A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0ABEFF5224FC67300AA705A;
+			remoteInfo = OBSMusicAssist;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D050C426224FE5140074862E /* iTunesBridge.applescript */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.applescript; path = iTunesBridge.applescript; sourceTree = "<group>"; };
+		D050C428224FFA5F0074862E /* iTunesBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesBridge.swift; sourceTree = "<group>"; };
+		D050C42B224FFE130074862E /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
+		D050C42C224FFE130074862E /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = System/Library/Frameworks/AppleScriptKit.framework; sourceTree = SDKROOT; };
+		D0ABEFF6224FC67300AA705A /* OBSMusicAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OBSMusicAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0ABEFF9224FC67300AA705A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D0ABEFFB224FC67300AA705A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0ABEFFD224FC67500AA705A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0ABF000224FC67500AA705A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0ABF002224FC67500AA705A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0ABF003224FC67500AA705A /* OBSMusicAssist.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OBSMusicAssist.entitlements; sourceTree = "<group>"; };
+		D0ABF008224FC67500AA705A /* OBSMusicAssistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OBSMusicAssistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0ABF00C224FC67500AA705A /* OBSMusicAssistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBSMusicAssistTests.swift; sourceTree = "<group>"; };
+		D0ABF00E224FC67500AA705A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0ABF013224FC67500AA705A /* OBSMusicAssistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OBSMusicAssistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0ABF017224FC67500AA705A /* OBSMusicAssistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBSMusicAssistUITests.swift; sourceTree = "<group>"; };
+		D0ABF019224FC67500AA705A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0ABEFF3224FC67300AA705A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D050C42D224FFE130074862E /* AppleScriptObjC.framework in Frameworks */,
+				D050C42E224FFE130074862E /* AppleScriptKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0ABF005224FC67500AA705A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0ABF010224FC67500AA705A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D050C42A224FFE130074862E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D050C42C224FFE130074862E /* AppleScriptKit.framework */,
+				D050C42B224FFE130074862E /* AppleScriptObjC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0ABEFED224FC67300AA705A = {
+			isa = PBXGroup;
+			children = (
+				D0ABEFF8224FC67300AA705A /* OBSMusicAssist */,
+				D0ABF00B224FC67500AA705A /* OBSMusicAssistTests */,
+				D0ABF016224FC67500AA705A /* OBSMusicAssistUITests */,
+				D0ABEFF7224FC67300AA705A /* Products */,
+				D050C42A224FFE130074862E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D0ABEFF7224FC67300AA705A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0ABEFF6224FC67300AA705A /* OBSMusicAssist.app */,
+				D0ABF008224FC67500AA705A /* OBSMusicAssistTests.xctest */,
+				D0ABF013224FC67500AA705A /* OBSMusicAssistUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0ABEFF8224FC67300AA705A /* OBSMusicAssist */ = {
+			isa = PBXGroup;
+			children = (
+				D0ABEFF9224FC67300AA705A /* AppDelegate.swift */,
+				D0ABEFFB224FC67300AA705A /* ViewController.swift */,
+				D0ABEFFD224FC67500AA705A /* Assets.xcassets */,
+				D0ABEFFF224FC67500AA705A /* Main.storyboard */,
+				D0ABF002224FC67500AA705A /* Info.plist */,
+				D0ABF003224FC67500AA705A /* OBSMusicAssist.entitlements */,
+				D050C426224FE5140074862E /* iTunesBridge.applescript */,
+				D050C428224FFA5F0074862E /* iTunesBridge.swift */,
+			);
+			path = OBSMusicAssist;
+			sourceTree = "<group>";
+		};
+		D0ABF00B224FC67500AA705A /* OBSMusicAssistTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0ABF00C224FC67500AA705A /* OBSMusicAssistTests.swift */,
+				D0ABF00E224FC67500AA705A /* Info.plist */,
+			);
+			path = OBSMusicAssistTests;
+			sourceTree = "<group>";
+		};
+		D0ABF016224FC67500AA705A /* OBSMusicAssistUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D0ABF017224FC67500AA705A /* OBSMusicAssistUITests.swift */,
+				D0ABF019224FC67500AA705A /* Info.plist */,
+			);
+			path = OBSMusicAssistUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0ABEFF5224FC67300AA705A /* OBSMusicAssist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0ABF01C224FC67500AA705A /* Build configuration list for PBXNativeTarget "OBSMusicAssist" */;
+			buildPhases = (
+				D0ABEFF2224FC67300AA705A /* Sources */,
+				D0ABEFF3224FC67300AA705A /* Frameworks */,
+				D0ABEFF4224FC67300AA705A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OBSMusicAssist;
+			productName = OBSMusicAssist;
+			productReference = D0ABEFF6224FC67300AA705A /* OBSMusicAssist.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0ABF007224FC67500AA705A /* OBSMusicAssistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0ABF01F224FC67500AA705A /* Build configuration list for PBXNativeTarget "OBSMusicAssistTests" */;
+			buildPhases = (
+				D0ABF004224FC67500AA705A /* Sources */,
+				D0ABF005224FC67500AA705A /* Frameworks */,
+				D0ABF006224FC67500AA705A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0ABF00A224FC67500AA705A /* PBXTargetDependency */,
+			);
+			name = OBSMusicAssistTests;
+			productName = OBSMusicAssistTests;
+			productReference = D0ABF008224FC67500AA705A /* OBSMusicAssistTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D0ABF012224FC67500AA705A /* OBSMusicAssistUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0ABF022224FC67500AA705A /* Build configuration list for PBXNativeTarget "OBSMusicAssistUITests" */;
+			buildPhases = (
+				D0ABF00F224FC67500AA705A /* Sources */,
+				D0ABF010224FC67500AA705A /* Frameworks */,
+				D0ABF011224FC67500AA705A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0ABF015224FC67500AA705A /* PBXTargetDependency */,
+			);
+			name = OBSMusicAssistUITests;
+			productName = OBSMusicAssistUITests;
+			productReference = D0ABF013224FC67500AA705A /* OBSMusicAssistUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0ABEFEE224FC67300AA705A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Maxwell Hubbard";
+				TargetAttributes = {
+					D0ABEFF5224FC67300AA705A = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					D0ABF007224FC67500AA705A = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = D0ABEFF5224FC67300AA705A;
+					};
+					D0ABF012224FC67500AA705A = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = D0ABEFF5224FC67300AA705A;
+					};
+				};
+			};
+			buildConfigurationList = D0ABEFF1224FC67300AA705A /* Build configuration list for PBXProject "OBSMusicAssist" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0ABEFED224FC67300AA705A;
+			productRefGroup = D0ABEFF7224FC67300AA705A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0ABEFF5224FC67300AA705A /* OBSMusicAssist */,
+				D0ABF007224FC67500AA705A /* OBSMusicAssistTests */,
+				D0ABF012224FC67500AA705A /* OBSMusicAssistUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0ABEFF4224FC67300AA705A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0ABEFFE224FC67500AA705A /* Assets.xcassets in Resources */,
+				D0ABF001224FC67500AA705A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0ABF006224FC67500AA705A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0ABF011224FC67500AA705A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0ABEFF2224FC67300AA705A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0ABEFFC224FC67300AA705A /* ViewController.swift in Sources */,
+				D050C427224FE5140074862E /* iTunesBridge.applescript in Sources */,
+				D050C429224FFA5F0074862E /* iTunesBridge.swift in Sources */,
+				D0ABEFFA224FC67300AA705A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0ABF004224FC67500AA705A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0ABF00D224FC67500AA705A /* OBSMusicAssistTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0ABF00F224FC67500AA705A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0ABF018224FC67500AA705A /* OBSMusicAssistUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0ABF00A224FC67500AA705A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0ABEFF5224FC67300AA705A /* OBSMusicAssist */;
+			targetProxy = D0ABF009224FC67500AA705A /* PBXContainerItemProxy */;
+		};
+		D0ABF015224FC67500AA705A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0ABEFF5224FC67300AA705A /* OBSMusicAssist */;
+			targetProxy = D0ABF014224FC67500AA705A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0ABEFFF224FC67500AA705A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0ABF000224FC67500AA705A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0ABF01A224FC67500AA705A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D0ABF01B224FC67500AA705A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D0ABF01D224FC67500AA705A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OBSMusicAssist/OBSMusicAssist.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4N252H9C76;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = OBSMusicAssist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = max.hubbard.OBSMusicAssist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D0ABF01E224FC67500AA705A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OBSMusicAssist/OBSMusicAssist.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4N252H9C76;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = OBSMusicAssist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = max.hubbard.OBSMusicAssist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D0ABF020224FC67500AA705A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4N252H9C76;
+				INFOPLIST_FILE = OBSMusicAssistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = max.hubbard.OBSMusicAssistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBSMusicAssist.app/Contents/MacOS/OBSMusicAssist";
+			};
+			name = Debug;
+		};
+		D0ABF021224FC67500AA705A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4N252H9C76;
+				INFOPLIST_FILE = OBSMusicAssistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = max.hubbard.OBSMusicAssistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBSMusicAssist.app/Contents/MacOS/OBSMusicAssist";
+			};
+			name = Release;
+		};
+		D0ABF023224FC67500AA705A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4N252H9C76;
+				INFOPLIST_FILE = OBSMusicAssistUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = max.hubbard.OBSMusicAssistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = OBSMusicAssist;
+			};
+			name = Debug;
+		};
+		D0ABF024224FC67500AA705A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4N252H9C76;
+				INFOPLIST_FILE = OBSMusicAssistUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = max.hubbard.OBSMusicAssistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = OBSMusicAssist;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0ABEFF1224FC67300AA705A /* Build configuration list for PBXProject "OBSMusicAssist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0ABF01A224FC67500AA705A /* Debug */,
+				D0ABF01B224FC67500AA705A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0ABF01C224FC67500AA705A /* Build configuration list for PBXNativeTarget "OBSMusicAssist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0ABF01D224FC67500AA705A /* Debug */,
+				D0ABF01E224FC67500AA705A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0ABF01F224FC67500AA705A /* Build configuration list for PBXNativeTarget "OBSMusicAssistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0ABF020224FC67500AA705A /* Debug */,
+				D0ABF021224FC67500AA705A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0ABF022224FC67500AA705A /* Build configuration list for PBXNativeTarget "OBSMusicAssistUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0ABF023224FC67500AA705A /* Debug */,
+				D0ABF024224FC67500AA705A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0ABEFEE224FC67300AA705A /* Project object */;
+}
