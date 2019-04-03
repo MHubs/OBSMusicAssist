@@ -27,7 +27,7 @@ extension NSImage {
 
 extension NSImageView {
     
-    func downloadedFrom(url: URL, imageScaling mode: NSImageScaling = NSImageScaling.scaleNone, complete: @escaping (Bool) -> Void) {
+    func downloadedFrom(url: URL, imageScaling mode: NSImageScaling = NSImageScaling.scaleProportionallyUpOrDown, complete: @escaping (Bool) -> Void) {
         imageScaling = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
@@ -43,7 +43,7 @@ extension NSImageView {
             }
             }.resume()
     }
-    func downloadedFrom(link: String, imageScaling mode: NSImageScaling = NSImageScaling.scaleAxesIndependently, complete: @escaping (Bool) -> Void) {
+    func downloadedFrom(link: String, imageScaling mode: NSImageScaling = NSImageScaling.scaleProportionallyUpOrDown, complete: @escaping (Bool) -> Void) {
         guard let url = URL(string: link) else { return }
         downloadedFrom(url: url, imageScaling: mode, complete: complete)
     }
@@ -59,11 +59,13 @@ class ViewController: NSViewController {
     @IBOutlet weak var songPath: NSTextField!
     @IBOutlet weak var artistPath: NSTextField!
     @IBOutlet weak var coverPath: NSTextField!
-    
+    var testImage: NSImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        testImage = NSImageView()
         
         try? FileManager.default.createDirectory(at: getDocumentsDirectory().appendingPathComponent("OBSMusicAssist"), withIntermediateDirectories: true, attributes: nil)
         
@@ -210,11 +212,18 @@ class ViewController: NSViewController {
                     if let fetchedDict = try? JSONSerialization.jsonObject(with: data!, options: .mutableLeaves) as? [String:Any],
                         let fetchedArray = fetchedDict ["results"] as? [[String:Any]] {
                     
+                        print(fetchedArray)
+                        
                         if fetchedArray[0]["artworkUrl100"] != nil {
                             DispatchQueue.main.async {
-                                self.albumArtImage!.downloadedFrom(link: fetchedArray[0]["artworkUrl100"] as! String, complete: {(done) in
+                                let ur = (fetchedArray[0]["artworkUrl100"] as! String).replacingOccurrences(of: "100x100bb", with: "200x200bb")
+                                self.albumArtImage!.downloadedFrom(url: URL(string: ur)!, complete: {(done) in
                                     
-                                    let image = self.albumArtImage.image!
+                                })
+                                
+                                self.testImage!.downloadedFrom(url: URL(string: ur.replacingOccurrences(of: "200x200bb", with: "500x500bb"))!, complete: {(done) in
+                                    
+                                    let image = self.testImage.image!
                                     image.pngWrite(to: URL(string: self.coverPath.stringValue)!)
                                 })
                             }
