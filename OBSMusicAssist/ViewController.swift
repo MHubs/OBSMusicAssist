@@ -107,7 +107,7 @@ class ViewController: NSViewController {
             }
             
             if !albumLabel.stringValue.isEmpty && albumLabel.stringValue != " " {
-                parseData(searchTerm: artistLabel.stringValue + " " + (trackInfo["trackAlbum"] as! String))
+                parseData(searchTerm: songLabel.stringValue + " " + (trackInfo["trackAlbum"] as! String))
             }
         }
     }
@@ -199,7 +199,7 @@ class ViewController: NSViewController {
     func parseData(searchTerm: String) {
         let itunesSearchTerm = searchTerm.replacingOccurrences(of: " ", with: "%20", options: .caseInsensitive, range: nil)
         let urlString = "https://itunes.apple.com/search?term=" + itunesSearchTerm
-        let url = URL(string: urlString)!
+        let url = URL(string: removeSpecial(text: urlString))!
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 print(error)
@@ -223,6 +223,11 @@ class ViewController: NSViewController {
                     }
                 }
             }.resume()
+    }
+    
+    func removeSpecial(text: String) -> String {
+        let okayChars = Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890+%-=().!_:/?&$#@[]")
+        return text.filter {okayChars.contains($0) }
     }
     
     func getDocumentsDirectory() -> URL {
