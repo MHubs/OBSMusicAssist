@@ -78,6 +78,8 @@ class ViewController: NSViewController {
         let dnc = DistributedNotificationCenter.default()
         dnc.addObserver(self, selector:#selector(updateTrackInfo),
                         name:NSNotification.Name(rawValue:"com.apple.iTunes.playerInfo"), object:nil)
+        dnc.addObserver(self, selector:#selector(updateTrackInfo),
+                        name:NSNotification.Name(rawValue:"com.apple.iTunes.sourceSaved"), object:nil)
         
         let appDelegate = NSApp.delegate as! AppDelegate
         
@@ -109,7 +111,7 @@ class ViewController: NSViewController {
             }
             
             if !albumLabel.stringValue.isEmpty && albumLabel.stringValue != " " {
-                parseData(searchTerm: songLabel.stringValue + " " + (trackInfo["trackAlbum"] as! String))
+                parseData(searchTerm: (trackInfo["trackAlbum"] as! String) + " " + artistLabel.stringValue)
             }
         }
     }
@@ -214,20 +216,35 @@ class ViewController: NSViewController {
                     
                         print(fetchedArray)
                         
-                        if fetchedArray[0]["artworkUrl100"] != nil {
-                            DispatchQueue.main.async {
-                                let ur = (fetchedArray[0]["artworkUrl100"] as! String).replacingOccurrences(of: "100x100bb", with: "200x200bb")
-                                self.albumArtImage!.downloadedFrom(url: URL(string: ur)!, complete: {(done) in
-                                    
-                                })
-                                
-                                self.testImage!.downloadedFrom(url: URL(string: ur.replacingOccurrences(of: "200x200bb", with: "500x500bb"))!, complete: {(done) in
-                                    
-                                    let image = self.testImage.image!
-                                    image.pngWrite(to: URL(string: self.coverPath.stringValue)!)
-                                })
-                            }
+                        if fetchedArray.count > 0 {
                             
+                            if fetchedArray[0]["artworkUrl100"] != nil {
+                                DispatchQueue.main.async {
+                                    let ur = (fetchedArray[0]["artworkUrl100"] as! String).replacingOccurrences(of: "100x100bb", with: "200x200bb")
+                                    
+                                    let url200 = URL(string: ur)
+                                    if url200 != nil {
+                                        
+                                        self.albumArtImage!.downloadedFrom(url: url200!, complete: {(done) in
+                                            
+                                        })
+                                        
+                                        self.testImage!.downloadedFrom(url: URL(string: ur.replacingOccurrences(of: "200x200bb", with: "500x500bb"))!, complete: {(done) in
+                                            
+                                            if done {
+                                                let image = self.testImage.image!
+                                                image.pngWrite(to: URL(string: self.coverPath.stringValue)!)
+                                            } else {
+                                                let image = NSImage(named: "512.png")
+                                                if image != nil {
+                                                    image!.pngWrite(to: URL(string: self.coverPath.stringValue)!)
+                                                }
+                                            }
+                                        })
+                                    }
+                                }
+                                
+                            }
                         }
                     }
                 }
